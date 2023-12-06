@@ -1,0 +1,20 @@
+{
+  "name": "import-monorepo",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --ext ts",
+    "start": "node --no-warnings --loader=ts-node/esm packages/downstream/index.ts"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@tpluscode/eslint-config": "^0.4.4",
+    "@types/node": "^20.10.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  }
+}
